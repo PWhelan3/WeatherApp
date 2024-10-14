@@ -24,3 +24,13 @@ function getWeather(city) {
             console.error('Error fetching weather data:', error);
         });
 }
+
+function displayWeather(data) {
+    const weatherContainer = document.getElementById('weatherDetails');
+    weatherContainer.innerHTML = `
+        <p><strong>City:</strong> ${data.name}</p>
+        <p><strong>Temperature:</strong> ${data.main.temp}°C</p>
+        <p><strong>Weather:</strong> ${data.weather[0].main}</p>
+        <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather icon">
+    `;
+}
