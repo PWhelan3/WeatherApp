@@ -34,3 +34,24 @@ function displayWeather(data) {
         <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather icon">
     `;
 }
+
+
+
+// Fetch city images for the slideshow
+function getCityHighlights(city) {
+    const apiKey = 'YOUR_UNSPLASH_API_KEY';  // Replace this with your Unsplash API key
+    const url = `https://api.unsplash.com/search/photos?query=${city}&client_id=${apiKey}&per_page=5`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.results.length > 0) {
+                displaySlideshow(data.results);
+            } else {
+                alert('No images found for this city');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching city images:', error);
+        });
+}
