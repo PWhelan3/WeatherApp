@@ -55,3 +55,19 @@ function getCityHighlights(city) {
             console.error('Error fetching city images:', error);
         });
 }
+
+// Display the slideshow
+function displaySlideshow(images) {
+    const slideshow = document.getElementById('slideshow');
+    slideshow.innerHTML = ''; // Clear previous images
+
+    images.forEach((image, index) => {
+        const img = document.createElement('img');
+        img.src = image.urls.regular;
+        img.alt = image.alt_description;
+        if (index === 0) img.classList.add('active'); // Make the first image visible
+        slideshow.appendChild(img);
+    });
+
+    startSlideshow();
+}
