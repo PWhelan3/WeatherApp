@@ -71,3 +71,16 @@ function displaySlideshow(images) {
 
     startSlideshow();
 }
+
+
+//For slideshow timing
+function startSlideshow() {
+    const slides = document.querySelectorAll('.slideshow img');
+    let currentIndex = 0;
+
+    setInterval(() => {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add('active');
+    }, 3000); // Change image every 3 seconds
+}
