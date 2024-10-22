@@ -1,3 +1,14 @@
+
+//JS for menu icon to toggle
+document.getElementById('menuIcon').addEventListener('click', toggleMenu);
+
+function toggleMenu() {
+    const sideMenu = document.getElementById('sideMenu');
+    sideMenu.classList.toggle('show');
+}
+
+
+
 document.getElementById('searchBtn').addEventListener('click', () => {
     const city = document.getElementById('searchInput').value;
     if (city) {
