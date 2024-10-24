@@ -4,9 +4,11 @@ document.getElementById('menuIcon').addEventListener('click', toggleMenu);
 
 function toggleMenu() {
     const sideMenu = document.getElementById('sideMenu');
-    sideMenu.classList.toggle('show');
-}
+    const menuIcon = document.getElementById('menuIcon');
 
+    sideMenu.classList.toggle('show');  // Toggle the visibility of the menu
+    menuIcon.classList.toggle('open');  // Toggle the color change of the menu button
+}
 
 
 document.getElementById('searchBtn').addEventListener('click', () => {

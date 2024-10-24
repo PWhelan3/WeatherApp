@@ -8,10 +8,16 @@
     background-color: #333;
     cursor: pointer;
     z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
 .menu-icon:hover {
     background-color: #555;
+}
+
+/* New style for the menu icon when the menu is open */
+.menu-icon.open {
+    background-color: #aaa; /* Light grey when menu is open */
 }
 
 .side-menu {
