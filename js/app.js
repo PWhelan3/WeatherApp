@@ -1,14 +1,32 @@
 
 //JS for menu icon to toggle
+// document.getElementById('menuIcon').addEventListener('click', toggleMenu);
+
+// function toggleMenu() {
+//     const sideMenu = document.getElementById('sideMenu');
+//     const menuIcon = document.getElementById('menuIcon');
+
+//     sideMenu.classList.toggle('show');  // Toggle the visibility of the menu
+//     menuIcon.classList.toggle('open');  // Toggle the color change of the menu button
+// }
+
 document.getElementById('menuIcon').addEventListener('click', toggleMenu);
 
 function toggleMenu() {
     const sideMenu = document.getElementById('sideMenu');
     const menuIcon = document.getElementById('menuIcon');
 
-    sideMenu.classList.toggle('show');  // Toggle the visibility of the menu
-    menuIcon.classList.toggle('open');  // Toggle the color change of the menu button
+    // Toggle the visibility of the menu
+    sideMenu.classList.toggle('show');
+    
+    // Check if the menu is open, and switch icons accordingly
+    if (sideMenu.classList.contains('show')) {
+        menuIcon.src = "icons/menu-open.svg";  // Set icon for open state
+    } else {
+        menuIcon.src = "icons/menu-closed.svg"; // Set icon for closed state
+    }
 }
+
 
 
 document.getElementById('searchBtn').addEventListener('click', () => {
