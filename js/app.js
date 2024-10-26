@@ -16,14 +16,14 @@ function toggleMenu() {
     const sideMenu = document.getElementById('sideMenu');
     const menuIcon = document.getElementById('menuIcon');
 
-    // Toggle the visibility of the menu
+    // Toggle the menu's visibility
     sideMenu.classList.toggle('show');
-    
-    // Check if the menu is open, and switch icons accordingly
+
+    // Toggle the icon based on the menu's visibility
     if (sideMenu.classList.contains('show')) {
-        menuIcon.src = "icons/menu-open.svg";  // Set icon for open state
+        menuIcon.src = "icons/menu-open.svg";  // Set to open icon
     } else {
-        menuIcon.src = "icons/menu-closed.svg"; // Set icon for closed state
+        menuIcon.src = "icons/menu-closed.svg"; // Set to closed icon
     }
 }
 
