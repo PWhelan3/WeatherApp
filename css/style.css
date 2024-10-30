@@ -1,3 +1,42 @@
+/* Basic styling for the banner container */
+.banner-container {
+    width: calc(100% - 40px); /* Adds a gap on both sides */
+    margin: 20px auto; /* Center it with a margin at the top */
+    overflow: hidden; /* Hide overflowing content */
+    border: 2px solid #ddd;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+}
+
+/* Style for the content that scrolls */
+.banner-content {
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+    animation: scrollBanner 20s linear infinite; /* Apply scroll animation */
+}
+
+/* Each item within the banner */
+.banner-item {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Keyframes for the scrolling effect */
+@keyframes scrollBanner {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* End at the left */
+    }
+}
+
+
 .menu-icon {
     position: fixed;
     top: 20px;
