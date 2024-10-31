@@ -10,6 +10,17 @@
 //     menuIcon.classList.toggle('open');  // Toggle the color change of the menu button
 // }
 
+
+//Scroll Banner
+window.addEventListener('DOMContentLoaded', () => {
+    const bannerContent = document.querySelector('.banner-content');
+    
+    // Clone the banner content and append it for seamless scrolling
+    const clone = bannerContent.cloneNode(true);
+    bannerContent.parentNode.appendChild(clone);
+});
+
+
 document.getElementById('menuIcon').addEventListener('click', toggleMenu);
 
 function toggleMenu() {
@@ -115,3 +126,6 @@ function startSlideshow() {
         slides[currentIndex].classList.add('active');
     }, 3000); // Change image every 3 seconds
 }
+
+
+
