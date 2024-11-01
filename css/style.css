@@ -13,7 +13,7 @@
 /* Style for the content that scrolls */
 .banner-content {
     display: flex;
-    gap: 20px;
+    justify-content: space-evenly;
     white-space: nowrap;
     animation: scrollBanner 20s linear infinite; /* Apply scroll animation */
 }
