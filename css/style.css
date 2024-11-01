@@ -1,5 +1,7 @@
 /* Basic styling for the banner container */
 .banner-container {
+    position: fixed;
+    top: 5rem;
     width: calc(100% - 40px); /* Adds a gap on both sides */
     margin: 20px auto; /* Center it with a margin at the top */
     overflow: hidden; /* Hide overflowing content */
@@ -84,7 +86,10 @@
     left: 0; /* Move into view */
 }
 
-
+#title {
+    position: fixed;
+    top: 1rem;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -96,6 +101,8 @@ body {
 }
 
 .container {
+    position: fixed;
+    top: 15rem;
     text-align: center;
     background-color: white;
     padding: 20px;
@@ -105,17 +112,22 @@ body {
 }
 
 .search-bar {
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
 input[type="text"] {
+    display: inline;
     padding: 10px;
-    width: 80%;
+    width: 65%;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 button {
+    display: inline;
+    width: 20%;
+    margin: 5px;
     padding: 10px;
     background-color: #4CAF50;
     color: white;
