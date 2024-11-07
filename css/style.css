@@ -111,10 +111,41 @@ body {
     width: 40vw;
 }
 
+/* Style for the search bar container */
 .search-bar {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
+
+/* Basic style for the input field */
+.search-bar input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    position: relative;
+}
+
+/* Creating the blinking cursor effect */
+.search-bar input[type="text"]::after {
+    content: '|'; /* The cursor line */
+    position: absolute;
+    right: 10px; /* Adjust to position at the end of the input text */
+    color: black;
+    animation: blinkCursor 1s steps(2, start) infinite;
+}
+
+/* Blinking animation */
+@keyframes blinkCursor {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
 
 input[type="text"] {
     display: inline;
