@@ -81,6 +81,28 @@
     color: #4CAF50;
 }
 
+
+/* Styling for the side menu links */
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu li {
+    margin: 15px 0;
+}
+
+.side-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.side-menu a:hover {
+    color: #4CAF50; /* Change color on hover */
+}
+
+
 /* Class to show the menu */
 .side-menu.show {
     left: 0; /* Move into view */
