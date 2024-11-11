@@ -38,6 +38,13 @@ function toggleMenu() {
     }
 }
 
+// Close the menu if a click occurs outside of it
+document.addEventListener('click', (event) => {
+    if (sideMenu.classList.contains('show') && !sideMenu.contains(event.target) && event.target !== menuIcon) {
+        toggleMenu(); // Close the menu
+    }
+});
+
 
 
 document.getElementById('searchBtn').addEventListener('click', () => {
