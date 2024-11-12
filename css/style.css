@@ -108,6 +108,20 @@
     left: 0; /* Move into view */
 }
 
+.side-menu {
+    transition: transform 0.3s ease;
+}
+
+.side-menu.show {
+    transform: translateX(0); /* Make sure it slides in fully when shown */
+}
+
+.side-menu:not(.show) {
+    transform: translateX(-100%); /* Slide out when hidden */
+}
+
+
+
 #title {
     position: fixed;
     top: 1rem;
